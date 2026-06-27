@@ -1,0 +1,21 @@
+site_name: WhatsAppy SDK
+site_description: Modern Python SDK for the Meta WhatsApp Cloud API
+site_author: Musa Adamu Wakili
+repo_url: https://github.com/musawakiliML/whatsappy-sdk
+repo_name: whatsappy-sdk
+
+theme:
+  name: material
+
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
