@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "whatsappy-sdk"
+version = "0.1"
+description = "WhatsAppy — Build WhatsApp applications, not HTTP requests."
+authors = ["Musa Adamu Wakili <musawakiliml@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

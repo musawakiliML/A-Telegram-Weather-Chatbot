@@ -14,273 +14,453 @@ Whether you're building chatbots, customer support systems, AI assistants, ecomm
 
 ---
 
-## Why WhatsAppy_SDK?
+[//]: # (## Why WhatsAppy_SDK?)
 
-The existing Python libraries for WhatsApp Cloud API are often:
+[//]: # ()
+[//]: # (The existing Python libraries for WhatsApp Cloud API are often:)
 
-- outdated
-- incomplete
-- thin wrappers around `requests`
-- tied to third-party providers
-- missing support for newer WhatsApp features such as Flows and Commerce APIs
+[//]: # ()
+[//]: # (- outdated)
 
-WhatsAppy is different.
+[//]: # (- incomplete)
 
-It is built directly on top of the official Meta WhatsApp Cloud API with one goal:
+[//]: # (- thin wrappers around `requests`)
 
-> **Provide the best developer experience for Python developers.**
+[//]: # (- tied to third-party providers)
 
----
+[//]: # (- missing support for newer WhatsApp features such as Flows and Commerce APIs)
 
-# Features
+[//]: # ()
+[//]: # (WhatsAppy is different.)
 
-### Messaging
+[//]: # ()
+[//]: # (It is built directly on top of the official Meta WhatsApp Cloud API with one goal:)
 
-- Send text messages
-- Send images, videos, audio and documents
-- Send stickers
-- Send contacts
-- Send locations
-- Send reactions
-- Reply to messages
-- Mark messages as read
+[//]: # ()
+[//]: # (> **Provide the best developer experience for Python developers.**)
 
-### Interactive Messages
+[//]: # ()
+[//]: # (---)
 
-- Reply buttons
-- Call-to-action buttons
-- Lists
-- Multi-product messages
-- Single-product messages
-- Catalog messages
-- Flow messages
+[//]: # ()
+[//]: # (# Features)
 
-### Templates
+[//]: # ()
+[//]: # (### Messaging)
 
-- Send template messages
-- Template parameter builders
-- Media templates
-- Authentication templates
+[//]: # ()
+[//]: # (- Send text messages)
 
-### Media
+[//]: # (- Send images, videos, audio and documents)
 
-- Upload media
-- Download media
-- Delete media
+[//]: # (- Send stickers)
 
-### Webhooks
+[//]: # (- Send contacts)
 
-- Automatic webhook verification
-- Typed webhook models
-- Event routing
-- Message parsing
+[//]: # (- Send locations)
 
-### Developer Experience
+[//]: # (- Send reactions)
 
-- Fully typed API
-- Pydantic models
-- Sync and Async clients
-- Excellent documentation
-- Framework integrations
-- First-class testing support
+[//]: # (- Reply to messages)
 
----
+[//]: # (- Mark messages as read)
 
-# Installation
+[//]: # ()
+[//]: # (### Interactive Messages)
 
-```bash
-pip install whatsappy_sdk
-```
+[//]: # ()
+[//]: # (- Reply buttons)
 
----
+[//]: # (- Call-to-action buttons)
 
-# Quick Start
+[//]: # (- Lists)
 
-```python
-from whatsappy_sdk import WhatsApp
+[//]: # (- Multi-product messages)
 
-client = WhatsApp(
-    access_token="YOUR_ACCESS_TOKEN",
-    phone_number_id="YOUR_PHONE_NUMBER_ID"
-)
+[//]: # (- Single-product messages)
 
-client.messages.send_text(
-    to="2348012345678",
-    text="Hello from WhatsAppy!"
-)
-```
+[//]: # (- Catalog messages)
 
----
+[//]: # (- Flow messages)
 
-# Webhook Example
+[//]: # ()
+[//]: # (### Templates)
 
-```python
-from fastapi import FastAPI
-from whatsappy_sdk import WebhookRouter
+[//]: # ()
+[//]: # (- Send template messages)
 
-app = FastAPI()
+[//]: # (- Template parameter builders)
 
-router = WebhookRouter()
+[//]: # (- Media templates)
 
+[//]: # (- Authentication templates)
 
-@router.message()
-async def handle_message(message):
-    print(message.text)
+[//]: # ()
+[//]: # (### Media)
 
+[//]: # ()
+[//]: # (- Upload media)
 
-app.include_router(router.fastapi())
-```
+[//]: # (- Download media)
 
-Simple.
+[//]: # (- Delete media)
 
-Clean.
+[//]: # ()
+[//]: # (### Webhooks)
 
-Pythonic.
+[//]: # ()
+[//]: # (- Automatic webhook verification)
 
----
+[//]: # (- Typed webhook models)
 
-# Project Goals
+[//]: # (- Event routing)
 
-WhatsAppy aims to become the most complete Python SDK for the Meta WhatsApp Cloud API by providing support for:
+[//]: # (- Message parsing)
 
-- Messaging
-- Media
-- Templates
-- Commerce APIs
-- WhatsApp Flows
-- Business Profile Management
-- Phone Number Management
-- Webhook Routing
-- Async Support
-- Developer CLI
-- Testing Utilities
+[//]: # ()
+[//]: # (### Developer Experience)
 
----
+[//]: # ()
+[//]: # (- Fully typed API)
 
-# Roadmap
+[//]: # (- Pydantic models)
 
-## v0.1
+[//]: # (- Sync and Async clients)
 
-- Core client
-- Authentication
-- Send text messages
-- Webhook verification
-- Typed models
-- FastAPI example
-- Flask example
-- Django example
+[//]: # (- Excellent documentation)
 
-## v0.2
+[//]: # (- Framework integrations)
 
-- Interactive messages
-- Media API
-- Templates
-- Better webhook routing
+[//]: # (- First-class testing support)
 
-## v0.3
+[//]: # ()
+[//]: # (---)
 
-- WhatsApp Flows
-- Commerce API
-- Catalog support
-- Product messages
+[//]: # ()
+[//]: # (# Installation)
 
-## v1.0
+[//]: # ()
+[//]: # (```bash)
 
-- Complete Cloud API support
-- CLI
-- Plugin architecture
-- Production-ready documentation
-- 100% typed public API
+[//]: # (pip install whatsappy_sdk)
 
----
+[//]: # (```)
 
-# Philosophy
+[//]: # ()
+[//]: # (---)
 
-WhatsAppy is built around three principles.
+[//]: # ()
+[//]: # (# Quick Start)
 
-## Developer Experience First
+[//]: # ()
+[//]: # (```python)
 
-The SDK should feel natural to Python developers.
+[//]: # (from whatsappy_sdk import WhatsApp)
 
-## Stay Close to Meta
+[//]: # ()
+[//]: # (client = WhatsApp&#40;)
 
-The SDK wraps the official WhatsApp Cloud API without introducing unnecessary abstractions.
+[//]: # (    access_token="YOUR_ACCESS_TOKEN",)
 
-## Production Ready
+[//]: # (    phone_number_id="YOUR_PHONE_NUMBER_ID")
 
-Everything included in WhatsAppy should be suitable for real-world applications.
+[//]: # (&#41;)
 
----
+[//]: # ()
+[//]: # (client.messages.send_text&#40;)
 
-# Documentation
+[//]: # (    to="2348012345678",)
 
-Documentation is currently under active development.
+[//]: # (    text="Hello from WhatsAppy!")
 
-It will include:
+[//]: # (&#41;)
 
-- Getting Started
-- Creating a Meta App
-- Configuring WhatsApp Cloud API
-- Sending your first message
-- Receiving webhooks
-- Interactive messages
-- Templates
-- Flows
-- Commerce
-- Deployment guides
-- Best practices
+[//]: # (```)
 
----
+[//]: # ()
+[//]: # (---)
 
-# Examples
+[//]: # ()
+[//]: # (# Webhook Example)
 
-Example projects will include:
+[//]: # ()
+[//]: # (```python)
 
-- Echo Bot
-- AI Chatbot
-- Customer Support Bot
-- Ecommerce Assistant
-- SilentPulse Integration
-- FastAPI
-- Flask
-- Django
+[//]: # (from fastapi import FastAPI)
 
----
+[//]: # (from whatsappy_sdk import WebhookRouter)
 
-# Contributing
+[//]: # ()
+[//]: # (app = FastAPI&#40;&#41;)
 
-Contributions are welcome!
+[//]: # ()
+[//]: # (router = WebhookRouter&#40;&#41;)
 
-Whether you're fixing bugs, improving documentation, adding new WhatsApp features, or suggesting API improvements, we'd love your help.
+[//]: # ()
+[//]: # ()
+[//]: # (@router.message&#40;&#41;)
 
-Please open an issue before working on large features so we can discuss the design together.
+[//]: # (async def handle_message&#40;message&#41;:)
 
----
+[//]: # (    print&#40;message.text&#41;)
 
-# Inspiration
+[//]: # ()
+[//]: # ()
+[//]: # (app.include_router&#40;router.fastapi&#40;&#41;&#41;)
 
-WhatsAppy is inspired by the developer experience offered by projects such as:
+[//]: # (```)
 
-- FastAPI
-- Requests
-- HTTPX
-- Pydantic
-- SQLAlchemy
+[//]: # ()
+[//]: # (Simple.)
 
-The goal is to bring the same level of elegance and productivity to the Meta WhatsApp Cloud API.
+[//]: # ()
+[//]: # (Clean.)
 
----
+[//]: # ()
+[//]: # (Pythonic.)
 
-# License
+[//]: # ()
+[//]: # (---)
 
-MIT License.
+[//]: # ()
+[//]: # (# Project Goals)
 
----
+[//]: # ()
+[//]: # (WhatsAppy aims to become the most complete Python SDK for the Meta WhatsApp Cloud API by providing support for:)
 
-## About the Project
+[//]: # ()
+[//]: # (- Messaging)
 
-WhatsAppy started as an internal SDK built to power several production applications, including AI assistants, anonymous feedback systems, research tools, ecommerce platforms, and automation workflows.
+[//]: # (- Media)
 
-Rather than solving the same integration challenges repeatedly, the SDK was open-sourced to help the broader Python community build better WhatsApp applications with less effort.
+[//]: # (- Templates)
 
-If WhatsAppy saves you time, consider giving the project a ⭐ on GitHub.
+[//]: # (- Commerce APIs)
+
+[//]: # (- WhatsApp Flows)
+
+[//]: # (- Business Profile Management)
+
+[//]: # (- Phone Number Management)
+
+[//]: # (- Webhook Routing)
+
+[//]: # (- Async Support)
+
+[//]: # (- Developer CLI)
+
+[//]: # (- Testing Utilities)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# Roadmap)
+
+[//]: # ()
+[//]: # (## v0.1)
+
+[//]: # ()
+[//]: # (- Core client)
+
+[//]: # (- Authentication)
+
+[//]: # (- Send text messages)
+
+[//]: # (- Webhook verification)
+
+[//]: # (- Typed models)
+
+[//]: # (- FastAPI example)
+
+[//]: # (- Flask example)
+
+[//]: # (- Django example)
+
+[//]: # ()
+[//]: # (## v0.2)
+
+[//]: # ()
+[//]: # (- Interactive messages)
+
+[//]: # (- Media API)
+
+[//]: # (- Templates)
+
+[//]: # (- Better webhook routing)
+
+[//]: # ()
+[//]: # (## v0.3)
+
+[//]: # ()
+[//]: # (- WhatsApp Flows)
+
+[//]: # (- Commerce API)
+
+[//]: # (- Catalog support)
+
+[//]: # (- Product messages)
+
+[//]: # ()
+[//]: # (## v1.0)
+
+[//]: # ()
+[//]: # (- Complete Cloud API support)
+
+[//]: # (- CLI)
+
+[//]: # (- Plugin architecture)
+
+[//]: # (- Production-ready documentation)
+
+[//]: # (- 100% typed public API)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# Philosophy)
+
+[//]: # ()
+[//]: # (WhatsAppy is built around three principles.)
+
+[//]: # ()
+[//]: # (## Developer Experience First)
+
+[//]: # ()
+[//]: # (The SDK should feel natural to Python developers.)
+
+[//]: # ()
+[//]: # (## Stay Close to Meta)
+
+[//]: # ()
+[//]: # (The SDK wraps the official WhatsApp Cloud API without introducing unnecessary abstractions.)
+
+[//]: # ()
+[//]: # (## Production Ready)
+
+[//]: # ()
+[//]: # (Everything included in WhatsAppy should be suitable for real-world applications.)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# Documentation)
+
+[//]: # ()
+[//]: # (Documentation is currently under active development.)
+
+[//]: # ()
+[//]: # (It will include:)
+
+[//]: # ()
+[//]: # (- Getting Started)
+
+[//]: # (- Creating a Meta App)
+
+[//]: # (- Configuring WhatsApp Cloud API)
+
+[//]: # (- Sending your first message)
+
+[//]: # (- Receiving webhooks)
+
+[//]: # (- Interactive messages)
+
+[//]: # (- Templates)
+
+[//]: # (- Flows)
+
+[//]: # (- Commerce)
+
+[//]: # (- Deployment guides)
+
+[//]: # (- Best practices)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# Examples)
+
+[//]: # ()
+[//]: # (Example projects will include:)
+
+[//]: # ()
+[//]: # (- Echo Bot)
+
+[//]: # (- AI Chatbot)
+
+[//]: # (- Customer Support Bot)
+
+[//]: # (- Ecommerce Assistant)
+
+[//]: # (- SilentPulse Integration)
+
+[//]: # (- FastAPI)
+
+[//]: # (- Flask)
+
+[//]: # (- Django)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# Contributing)
+
+[//]: # ()
+[//]: # (Contributions are welcome!)
+
+[//]: # ()
+[//]: # (Whether you're fixing bugs, improving documentation, adding new WhatsApp features, or suggesting API improvements, we'd love your help.)
+
+[//]: # ()
+[//]: # (Please open an issue before working on large features so we can discuss the design together.)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# Inspiration)
+
+[//]: # ()
+[//]: # (WhatsAppy is inspired by the developer experience offered by projects such as:)
+
+[//]: # ()
+[//]: # (- FastAPI)
+
+[//]: # (- Requests)
+
+[//]: # (- HTTPX)
+
+[//]: # (- Pydantic)
+
+[//]: # (- SQLAlchemy)
+
+[//]: # ()
+[//]: # (The goal is to bring the same level of elegance and productivity to the Meta WhatsApp Cloud API.)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (# License)
+
+[//]: # ()
+[//]: # (MIT License.)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (## About the Project)
+
+[//]: # ()
+[//]: # (WhatsAppy started as an internal SDK built to power several production applications, including AI assistants, anonymous feedback systems, research tools, ecommerce platforms, and automation workflows.)
+
+[//]: # ()
+[//]: # (Rather than solving the same integration challenges repeatedly, the SDK was open-sourced to help the broader Python community build better WhatsApp applications with less effort.)
+
+[//]: # ()
+[//]: # (If WhatsAppy saves you time, consider giving the project a ⭐ on GitHub.)
