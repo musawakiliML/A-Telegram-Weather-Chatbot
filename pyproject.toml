@@ -7,7 +7,7 @@ license = "MIT LICENSE"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 pydantic = {extras = ["email", "timezone"], version = "^2.13.4"}
 requests = "^2.34.2"
 httpx = "^0.28.1"
@@ -24,3 +24,13 @@ types-requests = "^2.33.0.20260518"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testspaths = ["tests"]
+
+[tool.coverage.run]
+source=["src/whatsappy"]
+
+[tool.coverage.report]
+show_missing=true
+skip_covered=false
