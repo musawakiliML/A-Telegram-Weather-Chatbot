@@ -10,7 +10,7 @@ WhatsAppy SDK is an open-source, developer-first Python wrapper for the **Meta W
 
 Instead of manually constructing HTTP requests and parsing deeply nested webhook payloads, WhatsAppy provides a clean, typed, and intuitive Python interface for building production-ready WhatsApp applications.
 
-Whether you're building chatbots, customer support systems, AI assistants, ecommerce platforms, or internal business tools, WhatsAppy lets you focus on your application—not the API boilerplate.
+Whether you're building chatbots, customer support systems, AI assistants, ecommerce platforms, or internal business tools, WhatsAppy lets you focus on your application not the API boilerplate.
 
 ---
 

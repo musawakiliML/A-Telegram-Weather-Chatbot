@@ -3,11 +3,18 @@ name = "whatsappy-sdk"
 version = "0.1"
 description = "WhatsAppy — Build WhatsApp applications, not HTTP requests."
 authors = ["Musa Adamu Wakili <musawakiliml@hotmail.com>"]
-license = "MIT"
+license = "MIT LICENSE"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+pydantic = {extras = ["email", "timezone"], version = "^2.13.4"}
+requests = "^2.34.2"
+httpx = "^0.28.1"
+mypy = "^2.1.0"
+pytest = "^9.1.1"
+respx = "^0.23.1"
+ruff = "^0.15.20"
 
 
 [build-system]
